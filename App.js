@@ -21,8 +21,8 @@ export default class App extends React.Component {
 
         <View style={styles.navBar}>
           <Image style={{height: Metrics.images.large, width: Metrics.images.large, tintColor: '#C5C5C5', resizeMode: 'contain', marginLeft: 10}} source={Images.settings} accessibilityLabel={"Settings icon"} />
-          <Image style={{height: Metrics.images.large, width: Metrics.images.large, resizeMode: 'contain'}} source={Images.logo} accessibilityLabel={"Tinder logo"}/>
-          <Image style={{height: Metrics.icons.xl, width: Metrics.icons.xl, tintColor: '#C5C5C5', resizeMode: 'contain', marginRight: 10}} source={Images.chat} accessibilityLabel={"Chat icon"} />
+          <Image style={{height: 90, width: 90, resizeMode: 'contain'}} source={Images.logo} accessibilityLabel={"Tinder logo"}/>
+          <Image style={{height: Metrics.images.medium, width: Metrics.images.medium, tintColor: '#C5C5C5', resizeMode: 'contain', marginRight: 10}} source={Images.chat} accessibilityLabel={"Chat icon"} />
         </View>
 
 
@@ -30,11 +30,11 @@ export default class App extends React.Component {
           <View style={styles.profileCard}>
             <Image style = { {height: Dimensions.get('window').width - 100, width: Dimensions.get('window').width - 100, resizeMode: 'contain'} } source={this.state.profileImage} accessibilityLabel={"The profile picture of a potential Tinder match"}/>
             <View style={styles.textBox}>
-                <Text style={ {fontSize: 24, fontWeight: 'bold'} }> {this.state.name + ", "} </Text>
+                <Text style={ {fontSize: 24, fontWeight: 'bold'} }> {this.state.name + ","} </Text>
                 <Text style={ {fontSize: 24} }>{this.state.age}</Text>
             </View>
             <View style={styles.textBox}>
-                <Text style={ {fontSize: 16} }> {this.state.occupation}</Text>
+                <Text style={ {fontSize: 16, color: 'grey', marginBottom: 5} }> {this.state.occupation}</Text>
             </View>
           </View>
         </View>
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     borderColor: '#C5C5C5', // grey color from the spec
-    borderWidth: 3,
+    borderWidth: 1,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     backgroundColor: 'white'
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     width: '100%',
     marginBottom: 30
   },
